@@ -1,0 +1,18 @@
+html{
+    font-family: IBM Plex Mono;
+}
+
+.info-box {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px;
+}
+
+.info-box ul, .info-box li {
+    list-style-type: none;
+}
+
+.info-box:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background on hover */
+}
