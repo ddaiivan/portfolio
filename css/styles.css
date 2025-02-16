@@ -16,3 +16,43 @@ html{
 .info-box:hover {
     background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background on hover */
 }
+
+/* Star fall animation */
+.star {
+  position: absolute;
+  top: -10px; /* Start above the viewport */
+  left: var(--star-left); /* Random horizontal position */
+  width: var(--star-size);
+  height: var(--star-size);
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: starfall var(--star-duration) linear forwards;
+}
+
+@keyframes starfall {
+  0% {
+    top: -10px;
+    opacity: 0;
+  }
+  20% {
+      opacity: 1;
+  }
+  80% {
+      opacity: 0.8;
+  }
+  100% {
+    top: 100vh; /* Fall to the bottom of the viewport */
+    opacity: 0;
+  }
+}
+
+#stars-container {
+  position: fixed; /* Atau absolute, tergantung layout */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Penting agar tidak mengganggu interaksi */
+  z-index: -1; /* Pastikan ada di belakang konten lain */
+}

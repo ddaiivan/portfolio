@@ -23,9 +23,13 @@
 
         <ul class="uk-navbar-nav uk-light">
             <li><a class="uk-button-text uk-text-capitalize" href="#about" uk-scroll>About</a></li>
+            <li><a class="uk-button-text uk-text-capitalize" href="#education" uk-scroll>Education</a></li>
+            <li><a class="uk-button-text uk-text-capitalize" href="#honors-awards" uk-scroll>Honors-Awards</a></li>
+            <li><a class="uk-button-text uk-text-capitalize" href="#publications" uk-scroll>Publications</a></li>
+            <li><a class="uk-button-text uk-text-capitalize" href="#experience" uk-scroll>Experiences</a></li>
+            <li><a class="uk-button-text uk-text-capitalize" href="#certifications" uk-scroll>Certifications</a></li>
             <li><a class="uk-button-text uk-text-capitalize" href="#projects" uk-scroll>Projects</a></li>
             <li><a class="uk-button-text uk-text-capitalize" href="mailto:" uk-scroll>Contact</a></li>
-
         </ul>
 
     </div>
@@ -54,6 +58,11 @@
         <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
             <li class="uk-active"><a href="#" uk-scroll>Home</a></li>
             <li class="uk-active"><a href="#about" uk-scroll>About</a></li>
+            <li class="uk-active"><a href="#education" uk-scroll>Education</a></li>
+            <li class="uk-active"><a href="#honors-awards" uk-scroll>Honors-Awards</a></li>
+            <li class="uk-active"><a href="#publications" uk-scroll>Publications</a></li>
+            <li class="uk-active"><a href="#experience" uk-scroll>Experiences</a></li>
+            <li class="uk-active"><a href="#certifications" uk-scroll>Certifications</a></li>
             <li class="uk-active"><a href="#projects" uk-scroll>Projects</a></li>
             <li class="uk-active"><a href="mailto:">Contact</a></li> <!--- change to ur email-->
 
@@ -84,9 +93,9 @@
 <section id="about" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
 <h3 class="uk-margin-xlarge-left uk-light">About Me</h3>
 <!-- Change here to ur paragraph -->
-<p class="uk-margin-xlarge-left uk-margin-xlarge-right">Experientia docet. Leveraging diverse experiences and a passion for learning to enhance health standards, drive sustainability, and create positive change in Indonesia. <br><br>Experientia (Experience): This refers to the knowledge or skill gained through direct observation, participation, or involvement in events or activities. It's not theoretical knowledge from books or lectures, but rather the practical understanding that comes from doing and living. This includes both successes and failures; we learn from both.
+<p class="uk-margin-xlarge-left uk-margin-xlarge-right">Experientia docet. Leveraging diverse experiences and a passion for learning to enhance health standards, drive sustainability, and create positive change in Indonesia. <br><br>Experientia (Experience): Knowledge or skill gained through direct observation, participation, or involvement in events or activities. It's not theoretical knowledge from books or lectures, but rather the practical understanding that comes from doing and living. This includes both successes and failures; we learn from both.
 
-    <br>Docet (Teaches): This is the verb, indicating that experience is the instructor, the source of learning. It implies a process of gaining wisdom, understanding, and skill.</p>
+    <br>Docet (Teaches): Experience is the instructor, the source of learning. It implies a process of gaining wisdom, understanding, and skill.</p>
 <a href="https://www.instagram.com/ddaiivan" target="_blank" class="uk-margin-xlarge-left uk-light uk-button-text" uk-icon="instagram"></a> &nbsp;<a href="https://www.linkedin.com/in/daivan-febri-juan-setiya-118560236/" target="_blank" class=" uk-light uk-button-text" uk-icon="linkedin"></a>
 
 <!-- About Me Ends -->
@@ -224,18 +233,18 @@
 <div class="uk-margin-xlarge-left uk-margin-xlarge-right">
     <!-- Change all of this to ur projects -->
     <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-        <h4>Project Name</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a class="uk-button-text uk-text-decoration-none" href="">
+        <h4>SrikandiSehat</h4>
+        <p>Platform pemantauan dan edukasi kanker payudara yang komprehensif.</p>
+        <a class="uk-button-text uk-text-decoration-none" href="https://ddaiivan.github.io/srikandisehat/" target="_blank">
             <span uk-icon="icon: link">
-            </span> Website Link </a>
+            </span> Buka SrikandiSehat </a>
         </div>
         <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-            <h4>Project Name</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a class="uk-button-text uk-text-decoration-none" href="">
+            <h4>INDEKS</h4>
+            <p>Integrasi Diagnosis dan Eksplorasi Data Hepatitis B, Stunting, serta Disabilitas.</p>
+            <a class="uk-button-text uk-text-decoration-none" href="https://ddaiivan.github.io/INDEKS/" target="_blank">
                 <span uk-icon="icon: link">
-                </span> Website Link </a>
+                </span> Buka INDEKS </a>
             </div></div>
 
 
@@ -248,5 +257,28 @@
 </div>
 <!-- Projects Section Ends -->
     
+<div id="stars-container"></div>
+<script>
+  function createStar() {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    star.style.setProperty('--star-left', Math.random() * 100 + 'vw');
+    star.style.setProperty('--star-size', Math.random() * 3 + 1 + 'px'); // Ukuran bintang antara 1px dan 4px
+    star.style.setProperty('--star-duration', Math.random() * 3 + 2 + 's'); // Durasi animasi antara 2s dan 5s
+    document.getElementById('stars-container').appendChild(star);
+
+    // Hapus bintang setelah animasi selesai
+    star.addEventListener('animationend', () => {
+      star.remove();
+    });
+  }
+
+    // Buat bintang secara periodik
+    setInterval(() => {
+        if (document.getElementById('stars-container').children.length < 50){ //Maksimal 50 bintang
+            createStar();
+        }
+    }, 200); // Buat bintang baru setiap 200ms
+</script>
 </body>
 </html>
